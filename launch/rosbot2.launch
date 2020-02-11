@@ -7,10 +7,9 @@
 		<include file="$(find multiple_rosbots)/launch/rosbot_all_hardware.launch"/>
         <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard" output="screen"/>  
         
-        <include file="$(find multiple_rosbots)/launch/move_base_rosbot2.launch" />
-        <include file="$(find multiple_rosbots)/launch/amcl_only_rosbot2.launch" />
 	</group>
 
-
+<include file="$(find multiple_rosbots)/launch/move_base_rosbot2.launch" />
+        <include file="$(find multiple_rosbots)/launch/amcl_only_rosbot2.launch" />
 
 </launch>
