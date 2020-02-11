@@ -15,8 +15,6 @@
 
     <node pkg="tf" type="static_transform_publisher" name="camera_publisher" args="-0.03 0 0.18 0 0 0 rosbot2/base_link rosbot2/camera_link 100" />
 
-
-    <arg name="rosbot_pro" default="false"/>
     
     <include unless="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosserial_bridge.launch"/>
     
