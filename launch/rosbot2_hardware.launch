@@ -17,10 +17,10 @@
 
 
     <arg name="rosbot_pro" default="false"/>
-
-    <include unless="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosseri$
-
-    <include if="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosserial_b$
+    
+    <include unless="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosserial_bridge.launch"/>
+    
+    <include if="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosserial_bridge.launch">
         <arg name="serial_port" value="/dev/ttyS4"/>
         <arg name="serial_baudrate" value="460800"/>
     </include>

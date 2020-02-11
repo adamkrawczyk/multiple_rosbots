@@ -17,10 +17,10 @@
 
 
     <arg name="rosbot_pro" default="false"/>
-
-    <include unless="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosseri$
-
-    <include if="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosserial_b$
+    
+    <include unless="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosserial_bridge.launch"/>
+    
+    <include if="$(arg rosbot_pro)" file="$(find rosbot_ekf)/launch/rosserial_bridge.launch">
         <arg name="serial_port" value="/dev/ttyS4"/>
         <arg name="serial_baudrate" value="460800"/>
     </include>
@@ -28,6 +28,7 @@
     <include file="$(find rosbot_ekf)/launch/message_conversion.launch"/>
 
     <include file="$(find rosbot_ekf)/launch/rosbot_ekf.launch"/>
+
 
     <node pkg="tf" type="static_transform_publisher" name="imu_publisher" args="0 0 0.02 0 0 0 rosbot1/base_link rosbot1/imu_link 100" />
 
