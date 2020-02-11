@@ -7,10 +7,10 @@
     <param name="map_frame" value="map"/>
     <param name="odom_frame" value="odom"/>
 
-    <param name="xmin" value="-5.0"/>
-    <param name="ymin" value="-5.0"/>
-    <param name="xmax" value="5.0"/>
-    <param name="ymax" value="5.0"/>
+    <param name="xmin" value="-25"/>
+    <param name="ymin" value="-25"/>
+    <param name="xmax" value="25"/>
+    <param name="ymax" value="25"/>
     <param name="map_update_interval" value="5.0"/>
     <param name="maxUrange" value="16.0"/>
     <param name="sigma" value="0.05"/>

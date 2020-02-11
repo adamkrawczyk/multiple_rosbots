@@ -10,9 +10,6 @@
         <include file="$(find multiple_rosbots)/launch/move_base_rosbot1.launch" />
         <include file="$(find multiple_rosbots)/launch/amcl_only_rosbot1.launch" />
     
-	</group>
-
-
-
+</group>
 
 </launch>
