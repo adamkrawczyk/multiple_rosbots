@@ -4,7 +4,7 @@
 <group ns="rosbot2">
 		<param name="tf_prefix" value="rosbot2" />
 
-		<include file="$(find multiple_rosbots)/launch/rosbot_all_hardware.launch"/>
+		<include file="$(find multiple_rosbots)/launch/rosbot2_hardware.launch"/>
         <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard" output="screen"/>  
         
 	</group>
