@@ -25,7 +25,7 @@
 
     <include file="$(find rosbot_ekf)/launch/message_conversion.launch"/>
 
-    <include file="$(find rosbot_ekf)/launch/rosbot_ekf.launch"/>
+    <include file="$(find multiple_rosbots)/launch/rosbot2_ekf.launch"/>
 
     <node pkg="tf" type="static_transform_publisher" name="imu_publisher" args="0 0 0.02 0 0 0 rosbot2/base_link rosbot2/imu_link 100" />
 
