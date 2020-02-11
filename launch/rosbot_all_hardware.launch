@@ -9,11 +9,9 @@
     <include file="$(find astra_launch)/launch/astra.launch"/>
 
     <include if="$(arg lidar_a2)" file="$(find rplidar_ros)/launch/rplidar.launch"/>
-    <include if="$(arg lidar_s1)" file="$(find rplidar_ros)/launch/rplidar_s1.launch">
+    <include if="$(arg lidar_s1)" file="$(find rplidar_ros)/launch/rplidar_s1.launch"/>
 
     <node pkg="tf" type="static_transform_publisher" name="laser_publisher" args="0 0 0.058 3.14159 0 0 base_link laser 100" />
-
-    <node pkg="tf" type="static_transform_publisher" name="imu_publisher" args="0 0 0.02 0 0 0 base_link imu_link 100" />
 
     <node pkg="tf" type="static_transform_publisher" name="camera_publisher" args="-0.03 0 0.18 0 0 0 base_link camera_link 100" />
 
